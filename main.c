@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mialibreria.h"
 
 /* PROTOTIPI DELLE FUNZIONI */
 /* La dichiarazione e la definizione di una funzione possono essere separate.
@@ -11,13 +12,6 @@
  * La definizione della funzione è ottenuta mediante la definizione del suo
  * corpo. La parte definitoria si trova dopo la funzione main.
  */
-float somma(float a, float b);
-float sottrazione(float a, float b);
-float prodotto(float a, float b);
-float divisione(float a, float b);
-int quoziente(int a, int b);
-float frazionale(int a, int b);
-float potenza(float base, int esponente);
 
 int main(int argc, char** argv) {
     float a, b;
@@ -78,52 +72,4 @@ int main(int argc, char** argv) {
 //    return (EXIT_SUCCESS);
       system ("pause");
       return 0;
-}
-
-float somma(float a, float b) {
-    float risultato;
-    risultato = a + b;
-    return risultato;
-}
-
-float sottrazione(float a, float b) {
-    float risultato;
-    risultato = a - b;
-    return risultato;
-}
-
-float prodotto(float a, float b) {
-    float risultato;
-    risultato = a * b;
-    return risultato;
-}
-
-float divisione(float a, float b) {
-    float risultato;
-    risultato = a / b;
-    return risultato;
-}
-
-int quoziente(int a, int b) {
-    int quoziente;
-    quoziente = a / b;
-    return quoziente;
-}
-
-float frazionale(int a, int b) {
-    int parteintera;
-    float risultato, frazionale;
-    parteintera = quoziente ( a, b);
-    risultato = divisione( a, b);
-    frazionale = risultato - parteintera;
-    return frazionale;
-}
-
-float potenza(float base, int esponente) {
-      int potenza = 1;
-      while(esponente > 0){
-                      potenza = potenza *base;
-                      esponente--;
-                         }
-      return potenza;
 }
